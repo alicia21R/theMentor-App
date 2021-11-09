@@ -28,7 +28,6 @@
     "react-native-screens": "~3.8.0",
     "react-native-tab-view": "^2.14.0",
     "react-native-vector-icons": "^9.0.0",
-    "react-native-web": "0.17.1"
     "react-native-heroicons": "^2.0.2",
     "react-native-web": "0.17.1",
     "tailwind-react-native-classnames": "^1.5.1"

@@ -16,7 +16,7 @@ import HomeScreen from './pages/HomeScreen';
 import DetailsScreen from './pages/DetailsScreen';
 import Shop from './pages/Shop';
 import Profile from './pages/Profile';
-import Courses from './pages/Courses';
+import CoursesScreen from './pages/CoursesScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -80,7 +80,7 @@ function App() {
           }}  />
         <Tab.Screen
           name="CoursesStack"
-          component={Courses}
+          component={CoursesScreen}
           options={{
             tabBarLabel: 'Courses',
             tabBarIcon: ({ color, size }) => (

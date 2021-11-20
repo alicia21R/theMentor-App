@@ -9,18 +9,15 @@ import {
   View,
   SafeAreaView,
   
-} from "react-native";
-import { Searchbar, ProgressBar } from "react-native-paper";
-
-class CoursesScreen extends React.Component {
-  state = {
-    firstQuery: "",
-  };
   
-  render() {
-    const { firstQuery } = this.state;
-    
-    return (
+} from "react-native";
+import SearchCos from '../pages/SeachBar/SearchCos';
+
+
+
+const CoursesScreen = ({ navigation }) => {
+  
+   return (
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView scrollEventThrottle={16}>
           <View style={styles.container}>
@@ -33,13 +30,13 @@ class CoursesScreen extends React.Component {
             >
               <TouchableOpacity
                 style={{
-                  backgroundColor: "#0d47a1",
+                  backgroundColor: "#800000",
                   padding: 20,
                   width: 150,
                   borderRadius: 10,
                   marginHorizontal: 2,
                 }}
-           
+              onPress = {()=> navigation.navigate('Resources')}
               >
                 <Text
                   style={{ textAlign: "center", color: "#fff", fontSize: 18 }}
@@ -49,12 +46,13 @@ class CoursesScreen extends React.Component {
               </TouchableOpacity>
               <TouchableOpacity
                 style={{
-                  backgroundColor: "#0d47a1",
+                  backgroundColor: "#800000",
                   padding: 20,
                   width: 150,
                   borderRadius: 10,
                   marginHorizontal: 2,
                 }}
+                onPress = {()=> navigation.navigate('Opportunities')}
               >
                 <Text
                   style={{ textAlign: "center", color: "#fff", fontSize: 18 }}
@@ -63,14 +61,7 @@ class CoursesScreen extends React.Component {
                 </Text>
               </TouchableOpacity>
             </View>
-            <Searchbar
-              style={{ marginHorizontal: 20, borderRadius: 15 ,backgroundColor: 'lightgrey'}}
-              placeholder="Search Courses"
-              onChangeText={(query) => {
-                this.setState({ firstQuery: query });
-              }}
-              value={firstQuery}
-            />
+            <SearchCos/>
             <Text
               style={{
                 fontSize: 30,
@@ -241,7 +232,7 @@ class CoursesScreen extends React.Component {
         </ScrollView>
       </SafeAreaView>
     );
-  }
+  
 }
 export default CoursesScreen;
 
@@ -251,7 +242,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 15,
+    // marginTop: 15,
   },
   imgContainer: {
     height: 200,

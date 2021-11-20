@@ -13,32 +13,39 @@ import {
 
 //importing screens from the pages folder
 import HomeScreen from './pages/HomeScreen';
-import DetailsScreen from './pages/DetailsScreen';
 import Shop from './pages/Shop';
 import Profile from './pages/Profile';
+import ResourcesScreen from './pages/ResourcesScreen';
 import CoursesScreen from './pages/CoursesScreen';
+import OpportunitiesScreen from './pages/OpportunitiesScreen';
+
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 //stack navigation to enable buttons to be navigable between screens
-function HomeStack() {
+function CoursesStack() {
   return (
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="Courses"
         screenOptions={{
-          headerStyle: { backgroundColor: '#42f44b' },
-          headerTintColor: '#fff',
+          headerStyle: { backgroundColor: '#fff' },
+          headerTintColor: '#000000',
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
         <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Home Page' }}/>
+          name="Courses"
+          component={CoursesScreen}
+          options={{ title: 'Courses Page' }}/>
         <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
-          options={{ title: 'Details Page' }} />
+          name="Resources"
+          component={ResourcesScreen}
+          options={{ title: 'Resources Page' }} />
+        <Stack.Screen
+          name="Opportunities"
+          component={OpportunitiesScreen}
+          options={{ title: 'Opportunities Page' }} />
       </Stack.Navigator>
   );
 }
@@ -54,7 +61,7 @@ function App() {
         }}>
         <Tab.Screen
           name="HomeStack"
-          component={HomeStack}
+          component={HomeScreen}
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
@@ -80,7 +87,7 @@ function App() {
           }}  />
         <Tab.Screen
           name="CoursesStack"
-          component={CoursesScreen}
+          component={CoursesStack}
           options={{
             tabBarLabel: 'Courses',
             tabBarIcon: ({ color, size }) => (

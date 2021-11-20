@@ -32,7 +32,7 @@ const ResourcesScreen = ({navigation}) =>{
                 borderWidth: 1,
                 borderColor: "#dddddd",
                 borderRadius: 60,
-                backgroundColor: "lightgrey",
+                backgroundColor: "grey",
                 width: "80%",
                 height: 110,
               }}
@@ -42,11 +42,11 @@ const ResourcesScreen = ({navigation}) =>{
                 <Text
                   style={{
                     textAlign: "center",
-                    fontSize: 18,
+                    fontSize: 30,
                     alignItems: "center",
                     flex: 1,
                     fontWeight: "700",
-                    color: "#800000",
+                    color: "#FFF",
                     marginTop: 1,
                   }}
                 >
@@ -59,7 +59,7 @@ const ResourcesScreen = ({navigation}) =>{
                     marginBottom: 10,
                     marginLeft: 10,
                     marginRight: 10,
-                    color: "#0000FF",
+                    color: "#FFF",
                     fontSize: 15,
                     textAlign: "center",
                   }}
@@ -88,9 +88,10 @@ const ResourcesScreen = ({navigation}) =>{
                       textAlign: "left",
                       fontSize: 15,
                       marginBottom: 1,
-                      width: 150,
-                      height: 100,
-                      paddingHorizontal: 5
+                      width: 180,
+                      height: 75,
+                      paddingLeft: 3
+                      
                     }}
                   >
                     Do you have a dream? Here is a tracker for beginners, to
@@ -129,9 +130,10 @@ const ResourcesScreen = ({navigation}) =>{
                       textAlign: "left",
                       fontSize: 14.5,
                       marginBottom: 1,
-                      width: 150,
-                      height: 105,
-                      paddingHorizontal: 7
+                      width: 180,
+                      height: 75,
+                      paddingLeft: 3
+                      
                     }}
                   >
                     Are you trying to figure out what to do next?
@@ -144,7 +146,7 @@ const ResourcesScreen = ({navigation}) =>{
                       textAlign: "center",
                       fontSize: 14,
                       color: "#0000FF",
-                      marginTop: 3
+                      
                     }}
                   >
                     CLICK TO DOWNLOAD.
@@ -172,9 +174,10 @@ const ResourcesScreen = ({navigation}) =>{
                       textAlign: "left",
                       fontSize: 14.5,
                       marginBottom: 1,
-                      width: 150,
-                      height: 80,
-                      paddingHorizontal: 5
+                      width: 180,
+                      height: 55,
+                      paddingLeft: 3
+                      
                     }}
                   >
                     Do you have an idea? Use this Ideation 
@@ -214,9 +217,10 @@ const ResourcesScreen = ({navigation}) =>{
                       textAlign: "left",
                       fontSize: 14.5,
                       marginBottom: 1,
-                      width: 150,
-                      height: 90,
-                      paddingHorizontal: 5
+                      width: 180,
+                      height: 70,
+                      paddingLeft: 3
+                      
                     }}
                   >
                    CV writing for job applications can be a daunting task.
@@ -256,9 +260,10 @@ const ResourcesScreen = ({navigation}) =>{
                       textAlign: "left",
                       fontSize: 14.5,
                       marginBottom: 1,
-                      width: 150,
-                      height: 100,
-                      paddingHorizontal: 5
+                      width: 180,
+                      height: 90,
+                      paddingLeft: 3
+                     
                     }}
                   >
                     Do you struggle with writing concept notes and proposals? 
@@ -270,7 +275,7 @@ const ResourcesScreen = ({navigation}) =>{
                       textAlign: "center",
                       fontSize: 14,
                       color: "#0000FF",
-                      marginTop: 5
+                     
                     }}
                   >
                     CLICK TO DOWNLOAD.
@@ -296,9 +301,8 @@ const styles = StyleSheet.create({
     
   },
   imgContainer: {
-    height: 190,
-    width: 160,
-    borderColor: "#dddddd",
+    height: 120,
+    width: 120,
     resizeMode: "cover",
     
   },
@@ -315,22 +319,18 @@ const styles = StyleSheet.create({
     flex: 1,
     fontWeight: "200",
     color: "#FFFF",
-    marginTop: 1,
-    borderWidth: 1,
-    borderColor: "#dddddd",
     borderRadius: 5,
-    backgroundColor: "lightgrey",
     width: 160,
-    height: 190,
+    height: 120,
   },
   imgTxt: {
     marginHorizontal: 5,
     alignItems: "center",
     flexDirection: "row",
-    margin: 20,
-    paddingHorizontal: 1,
-    borderWidth: 1,
-    height: 190
+    margin: 15,
+    paddingHorizontal: 5,
+    height: 140,
+    
   },
  
 });

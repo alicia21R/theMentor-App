@@ -32,17 +32,16 @@ const OpportunitiesScreen = ({ navigation }) => {
                 marginTop: 15,
                 borderWidth: 1,
                 borderColor: "#dddddd",
-                // borderRadius: 60,
                 backgroundColor: "grey",
                 width: "90%",
-                height: 110,
+                height: 125,
               }}
             >
               <View>
                 <Text
                   style={{
                     textAlign: "center",
-                    fontSize: 18,
+                    fontSize: 30,
                     alignItems: "center",
                     flex: 1,
                     fontWeight: "700",

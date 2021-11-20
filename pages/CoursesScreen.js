@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
-    // marginTop: 15,
+    
   },
   imgContainer: {
     height: 200,

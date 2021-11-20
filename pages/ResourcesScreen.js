@@ -69,6 +69,7 @@ const ResourcesScreen = ({navigation}) =>{
                 </Text>
               </View>
             </View>
+            <View style={styles.container}>
             <View
               style={styles.imgTxt}
             >
@@ -90,7 +91,7 @@ const ResourcesScreen = ({navigation}) =>{
                       marginBottom: 1,
                       width: 180,
                       height: 75,
-                      paddingLeft: 3
+                      paddingLeft: 5
                       
                     }}
                   >
@@ -111,6 +112,7 @@ const ResourcesScreen = ({navigation}) =>{
                 </View>
               </View>
             </View>
+            
             <View
               style={styles.imgTxt}
             >
@@ -131,8 +133,8 @@ const ResourcesScreen = ({navigation}) =>{
                       fontSize: 14.5,
                       marginBottom: 1,
                       width: 180,
-                      height: 75,
-                      paddingLeft: 3
+                      height: 70,
+                      paddingLeft: 5
                       
                     }}
                   >
@@ -176,7 +178,7 @@ const ResourcesScreen = ({navigation}) =>{
                       marginBottom: 1,
                       width: 180,
                       height: 55,
-                      paddingLeft: 3
+                      paddingLeft: 5
                       
                     }}
                   >
@@ -219,7 +221,7 @@ const ResourcesScreen = ({navigation}) =>{
                       marginBottom: 1,
                       width: 180,
                       height: 70,
-                      paddingLeft: 3
+                      paddingLeft: 5
                       
                     }}
                   >
@@ -262,7 +264,7 @@ const ResourcesScreen = ({navigation}) =>{
                       marginBottom: 1,
                       width: 180,
                       height: 90,
-                      paddingLeft: 3
+                      paddingLeft: 5
                      
                     }}
                   >
@@ -284,6 +286,7 @@ const ResourcesScreen = ({navigation}) =>{
                 </View>
               </View>
             </View>
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -298,6 +301,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
+    paddingBottom: 20
     
   },
   imgContainer: {
@@ -307,9 +311,10 @@ const styles = StyleSheet.create({
     
   },
   textHolder: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "700",
     color: "#0000FF",
+    textAlign: "left"
     
   },
   container1: {
@@ -322,12 +327,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: 160,
     height: 120,
+   
   },
   imgTxt: {
     marginHorizontal: 5,
     alignItems: "center",
     flexDirection: "row",
-    margin: 15,
+    margin: 10,
     paddingHorizontal: 5,
     height: 140,
     

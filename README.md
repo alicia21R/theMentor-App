@@ -1,6 +1,6 @@
-# theMentor-App
-
-This is a mobile version of the Mentor for Boundless Minds. Built with React Native, Tailwind CSS.
+<h1 align="center">📚 The Xoma App 📚</h1>
+<p align="center">This is a mobile version of the Mentor for Boundless Minds. Built with React Native, Tailwind CSS.
+</p>
 
 <p align="center"> 
   <a href="https://github.com/Boundless-App/theMentor-App" title="License">

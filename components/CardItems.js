@@ -1,13 +1,66 @@
-import React from 'react';
+ import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { COLORS, FONTS,SIZES,icons } from "../constants";
 
 const CardItem = ({ item, isSelected, onPress}) =>{
     return(
-       <TouchableOpacity>
+       <TouchableOpacity
+        style={{
+            flexDirection: 'row',
+            alignItems:'center',
+            height:100,
+            marginTop: SIZES.radius,
+            paddingHorizontal: SIZES.padding,
+            borderWidth:2,
+            borderRadius: SIZES.radius,
+            borderColor:isSelected? COLORS.primary : COLORS.lightGray2
 
-           <Text>{item.name}</Text>
+        }}
+
+        onPress={onPress}
+       >
+           {/* Card image */}
+           <View 
+           style={{
+               width:60,
+               height:45,
+               alignItems: 'center',
+               justifyContent:'center',
+               borderWidth:2,
+               borderRadius:SIZES.radius,
+               borderColor: COLORS.lightGray2
+           }}
+           >
+               <Image
+               source={item.icons}
+               resizeMode='center'
+               style={{
+                   width:35, 
+                   height:35
+               }}
+               
+               />
+
+           </View>
+
+           {/* Name */}
+           <Text
+           style={{
+               flex:1,
+               marginLeft:SIZES.radius,
+               ...FONTS.h3
+           }}
+           >{item.name}</Text>
+
+           {/* Radio Button */}
+           <Image 
+           source={isSelected? icons.check_on : icons.check_off}
+           style={{
+               width:25,
+               height:25
+           }}
+           />
        </TouchableOpacity>
     )
 }
-export default CardItem
+export default CardItem;

@@ -1,17 +1,15 @@
 import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
-import { FONTS, COLORS, SIZES , icons, images, dummydata, dummyData} from "../../constants";
-import { Header, 
-    IconButton ,
-     CartQuantityButton, 
-     IconLabel, 
-     TextButton,
-     LineDivider,
-     StepperInput
-    } from "../../components";
-import { render } from 'react-dom';
-
-
+import { FONTS, COLORS, SIZES , icons, images, dummyData} from "../../constants";
+import { 
+    Header,
+    IconButton,
+    CartQuantityButton,
+    IconLabel,
+    TextButton,
+    LineDivider,
+    StepperInput 
+ } from "../../components";
 
 
 const BooksDetail =({ navigation }) =>{
@@ -192,12 +190,13 @@ const BooksDetail =({ navigation }) =>{
                  label = "Buy Now"
                  label2=" UGX 20000 "
 
-                 onPress = {() => navigation.navigate ('MyCart')}
+                 onPress = {() => navigation.navigate('MyCart')}
                 
                 />
             </View>
         )
     }
+
     return (
         <View
             style ={{

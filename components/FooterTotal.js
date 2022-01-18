@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Platform } from 'react-native';
-import { LinearGradient }from "react-native-linear-gradient";
+// import LinearGradient from "react-native-linear-gradient";
 import { TextButton,LineDivider } from "../components";
 import { FONTS, SIZES,COLORS } from "../constants";
 
@@ -8,9 +8,9 @@ const FooterTotal =({ subTotal , shippingFee, total, onPress}) =>{
     return(
         <View>
             {/* shadow */}
-            <LinearGradient 
-             start={{ x:0, y:0}}
-             end={{x:0, y:1}}
+            {/* <LinearGradient 
+             start={{ x: 0, y: 0 }}
+             end={{ x:0, y:1 }}
              colors={[COLORS.transparent, COLORS.lightGray1]}
              style={{
                  position: 'absolute',
@@ -21,10 +21,11 @@ const FooterTotal =({ subTotal , shippingFee, total, onPress}) =>{
                  borderTopLeftRadius:15,
                  borderTopRightRadius: 15
              }}
-            />
+            /> */}
+
             {/* Order Details */}
 
-            <View 
+            <View  
             style={{
                 padding:SIZES.padding,
                 borderTopLeftRadius: 20,
@@ -50,7 +51,7 @@ const FooterTotal =({ subTotal , shippingFee, total, onPress}) =>{
                     marginBottom:SIZES.padding,
                 }}>
                     <Text style={{ flex:1, ...FONTS.body3}}> Shipping Fee</Text>
-                    <Text style={{ ...FONTS.h3}}>UGX {shippingFee.toFixed(2)}</Text> 
+                    <Text style={{...FONTS.h3}}>UGX {shippingFee.toFixed(2)}</Text> 
                 </View>
 
                 {/* Line */}
@@ -62,9 +63,9 @@ const FooterTotal =({ subTotal , shippingFee, total, onPress}) =>{
                 style={{
                     flexDirection:'row',
                     marginTop:SIZES.padding,
-                    
+                     
                 }}>
-                    <Text style={{ flex:1, ...FONTS.h2}}> Total</Text>
+                    <Text style={{ flex:1, ...FONTS.h2 }}> Total</Text>
                     <Text style={{ ...FONTS.h2}}>UGX {total.toFixed(2)}</Text> 
 
                 </View>

@@ -1,5 +1,5 @@
 //book Details
-import BooksDetail from "./BooksDetail/BooksDetail"
+import BooksDetail from "./BooksDetail/BooksDetail";
 import MyCart from "./Cart/MyCart";
 import MyCard from "./Card/MyCard";
 

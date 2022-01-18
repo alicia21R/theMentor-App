@@ -6,8 +6,8 @@ export const COLORS ={
     //base colors
 
     //colors
-    primary: "#FF6C44", //orange
-    transparentPrimray: 'rgba(227, 120, 75, 0.4)',
+    primary: "#8B0000", //orange
+    transparentPrimary: 'rgba(220,20,60,0.4)',
     orange: "#FFA133",
     lightOrange: "#FFA133",
     lightOrange2: "#FDDED4",

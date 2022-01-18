@@ -4,6 +4,7 @@ export const cart = require("../assets/icons/cart.png")
 export const star= require("../assets/icons/star.png")
 export const minus= require("../assets/icons/minus.png")
 export const plus= require("../assets/icons/plus.png")
+export const correct= require("../assets/icons/correct.png")
 export const search = require("../assets/icons/search.png")
 export const location = require("../assets/icons/location.png")
 export const location1 = require("../assets/icons/location1.png")
@@ -25,6 +26,7 @@ export default {
     check_on,
     check_circle,
     delete_icon,
+    correct,
     cancel,
     location1,
     minus,

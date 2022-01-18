@@ -20,7 +20,7 @@ const TextButton =({
             backgroundColor: COLORS.primary,
             ...buttonContainerStyle
         }}
-        // disabled={disabled}
+        disabled={disabled}
         onPress={onPress}
         >
             <Text

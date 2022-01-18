@@ -1,10 +1,13 @@
 import React from 'react';
 import { View, Text , ScrollView} from 'react-native';
-import {Header, IconButton, TextButton} from "../../components";
+import {Header, IconButton, TextButton, CardItem} from "../../components";
 import { FONTS, SIZES, COLORS,icons,dummyData } from "../../constants";
 
 
 const MyCard=({ navigation }) =>{
+
+    // usestates for the selected card
+    const[ selectedCard, setSelectedcard]=React.useState(null)
 
     function renderHeader() {
         return(
@@ -51,6 +54,78 @@ const MyCard=({ navigation }) =>{
         )
     }
 
+    function renderMyCards() {
+        return(
+            <View>
+                {dummyData.myCards.map((item, index) =>{
+                    return(
+                        <CardItem
+                        key={'MyCard-${item.id}'}
+                        item={{ item }}
+                        isSelected={'${selectedCard?.key}-${selectedCard?.id}' == 'MyCard - ${item.id}'}
+                        onPress={() =>setSelectedCard({...item, key:"MyCard"})}
+                        />
+                    )
+                })}
+            </View>
+        )
+    }
+
+    function renderAddNewCard() {
+        return(
+            <View
+            style={{
+                marginTop: SIZES.padding
+            }}
+            >
+                <Text style={{...FONTS.h3}}>Add New Card</Text> 
+                {dummyData.allCards.map((item, index)=>{
+                    return(
+                        <CardItem
+                        key={'NewCard - ${item.id}'}
+                        item={item}
+                        isSelected={'${selectedCard?.key} - ${selectedCard?.id' == 'NewCard -${item.id}'}
+                        onPress={()=> setSelectedCard({...item, key:"NewCard"})}
+                        
+                        />
+                    )
+                })}
+            </View>
+        )
+    }
+
+    function renderFooter() {
+        return(
+            <View 
+            style={{
+                paddingTop:SIZES.radius,
+                paddingBottom:SIZES.padding,
+                paddingHorizontal:SIZES.padding
+            }}
+            >
+                <TextButton 
+                disabled={selectedCard == null}
+                buttonContainerStyle={{
+                    height: 60,
+                    borderRadius:SIZES.radius,
+                    backgroundColor: selectedCard ==null? COLORS.gray: COLORS.primary
+                }}
+
+                label={selectedCard?.key =="NewCard"? "Add" : "Confirm Order"}
+                onPress={()=> {
+                     if(selectedCard?.key =="NewCard"){
+                         navigation.navigate("AddCard",{selectedCard: selectedCard})
+                     } else{
+                         navigation.navigate("Checkout",{selectedCard:selectedCard})
+                     }
+                }}
+                />
+
+            </View>
+
+        )
+    }
+
 
 
     return(
@@ -64,8 +139,24 @@ const MyCard=({ navigation }) =>{
             {renderHeader()}
 
             {/* Cards */}
+            <ScrollView
+            contentContainerStyle={{
+                flexGrow: 1,
+                marginTop: SIZES.radius,
+                paddingHorizontal:SIZES.padding,
+                paddingBottom:SIZES.radius
+            }} 
+            > 
+                {/* My Cards */}
+                {renderMyCards()}
+
+                {/* Add New Cards */}
+                {renderAddNewCard()}
+
+            </ScrollView>
 
             {/* Footer */}
+           {renderFooter()}
 
         </View>
     )

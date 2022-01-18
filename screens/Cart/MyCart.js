@@ -14,7 +14,7 @@ import { FONTS,COLORS,SIZES,icons,dummyData } from "../../constants";
 
 const MyCart = ({  navigation }) =>{
 
-    //states for holding the quantuti in the cart
+    //states for holding the quantity in the cart
     const [myCartList, setMycartList] = React.useState(dummyData.myCart)
 
     //Quatntity Handler

@@ -11,6 +11,7 @@ const StepperInput = ({containerStyle, value =1, onAdd, onMinus}) =>{
             height:60,
             width:130,
             backgroundColor: COLORS.lightGray2,
+            borderRadius: SIZES.radius,
             ...containerStyle
         }}
         >

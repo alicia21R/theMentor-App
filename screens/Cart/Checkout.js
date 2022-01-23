@@ -61,6 +61,70 @@ const Checkout = ({ navigation, route }) => {
         />
         )
     }
+function renderMyCards() {
+    return(
+        <View>
+            {selectedCard && dummyData.myCards.map((item, index)
+            =>{
+             return(
+                 <CardItem 
+                 key={'MyCard-${item.id}'}
+                 item={item}
+                 isSelected={'${selectedCard?.key}-${selectedCard?.id}' == 'MyCard-${item.id}'}
+                 onPress={() => setSelectedCard({...item, key:"MyCard"})}
+                 />
+             )   
+            }
+            )}
+        </View>
+    )
+}
+
+function renderDeliveryAddress(){
+
+    return(
+        <View
+        style={{
+            marginTop:SIZES.padding,
+        }}
+        >
+            <Text style={{...FONTS.h3}}>Delivery Address</Text>
+            <View
+            style={{
+                 flexDirection:'row',
+                 alignItems:'center',
+                 marginTop:SIZES.radius,
+                 paddingVertical:SIZES.radius,
+                 paddingHorizontal:SIZES.padding,
+                 borderWidth:2,
+                 borderRadius:SIZES.radius,
+                 borderColor:COLORS.lightGray2
+
+            }}
+            >
+                <Image 
+                source={icons.location1}
+                style={{
+                    width:50,
+                    height:50
+                }}
+                />
+
+                <Text
+                style={{
+                    marginLeft:SIZES.radius,
+                    width: "85%",
+                    ...FONTS.body3
+                }}
+                > 300 san Fransisco Peru, CA</Text>
+
+            </View>
+        </View>
+    )
+
+
+}
+
 
     return (
         <View
@@ -76,10 +140,27 @@ const Checkout = ({ navigation, route }) => {
             <KeyboardAwareScrollView
             keyboardDismissMode="on-drag"
             extraScrollHeight={-200}
-            co
+            contentContainerStyle={{
+                flexGrow:1,
+                paddingHorizontal:SIZES.padding,
+                paddingBottom:20
+            }}
+
             >
+                {/* My Cards */}
+                {renderMyCards()}
+
+                {/* Delivery Address */}
+                {renderDeliveryAddress()}
 
             </KeyboardAwareScrollView>
+
+            <FooterTotal 
+            subTotal={40000}
+            shippingFee={0000}
+            total={40000}
+            onPress={()=> navigation.replace("Success")}
+            />
         </View>
     )
 }

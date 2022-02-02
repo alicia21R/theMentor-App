@@ -27,7 +27,7 @@ const DeliveryStatus = ({ navigation }) =>{
                 paddingHorizontal:SIZES.padding
             }}
             >
-                <Text style={{ ...FONTS.body4, textAlign="center", color:COLORS.gray}}> Estimated Delivery</Text>
+                <Text style={{ ...FONTS.body4, textAlign:"center", color:COLORS.gray}}> Estimated Delivery</Text>
                 <Text style={{ ...FONTS.h2, textAlign:"center"}}> 31 November 2022 / 12:30 am</Text>
 
             </View>
@@ -77,8 +77,7 @@ const DeliveryStatus = ({ navigation }) =>{
                      paddingHorizontal:SIZES.padding
                  }}
                  >
-                     {constants.track_order_status.map((item,index)
-                     =>{
+                     {constants.track_order_status.map((item,index)=>{
                          return(
                              <View
                              key={'StatusList-${index}'}

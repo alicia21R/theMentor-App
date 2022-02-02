@@ -6,7 +6,7 @@ const CardItem = ({ item, isSelected, onPress}) =>{
     return(
        <TouchableOpacity
         style={{
-            flexDirection: 'row',
+            flexDirection:'row',
             alignItems:'center',
             height:100,
             marginTop: SIZES.radius,
@@ -24,7 +24,7 @@ const CardItem = ({ item, isSelected, onPress}) =>{
            style={{
                width:60,
                height:45,
-               alignItems: 'center',
+               alignItems:'center',
                justifyContent:'center',
                borderWidth:2,
                borderRadius:SIZES.radius,
@@ -54,7 +54,7 @@ const CardItem = ({ item, isSelected, onPress}) =>{
 
            {/* Radio Button */}
            <Image 
-           source={isSelected? icons.check_on : icons.check_off}
+           source={isSelected? icons.check_on:icons.check_off}
            style={{
                width:25,
                height:25

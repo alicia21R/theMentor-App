@@ -7,7 +7,7 @@ import { FONTS, SIZES, COLORS,icons,dummyData } from "../../constants";
 const MyCard=({ navigation }) =>{
 
     // usestates for the selected card
-    const[ selectedCard, setSelectedcard]=React.useState(null)
+    const [selectedCard,setSelectedcard]=React.useState(null);
 
     function renderHeader() {
         return(
@@ -61,9 +61,10 @@ const MyCard=({ navigation }) =>{
                     return(
                         <CardItem
                         key={'MyCard-${item.id}'}
-                        item={{ item }}
-                        isSelected={'${selectedCard?.key}-${selectedCard?.id}' == 'MyCard - ${item.id}'}
-                        onPress={() =>setSelectedCard({...item, key:"MyCard"})}
+                        item={item}
+                        isSelected={'${selectedCard.key}-${selectedCard.id}' == 'MyCard-${item.id}'}
+                        onPress={() => 
+                            setSelectedcard({...item,key:"MyCard"})}
                         />
                     )
                 })}
@@ -79,13 +80,15 @@ const MyCard=({ navigation }) =>{
             }}
             >
                 <Text style={{...FONTS.h3}}>Add New Card</Text> 
+                
                 {dummyData.allCards.map((item, index)=>{
                     return(
                         <CardItem
-                        key={'NewCard - ${item.id}'}
+                        key={'NewCard-${item.id}'}
                         item={item}
-                        isSelected={'${selectedCard?.key} - ${selectedCard?.id' == 'NewCard -${item.id}'}
-                        onPress={()=> setSelectedCard({...item, key:"NewCard"})}
+                        isSelected={'${selectedCard.key}-${selectedCard.id' == 'NewCard-${item.id}'}
+                        onPress={()=> 
+                            setSelectedcard({...item, key:"NewCard"})}
                         
                         />
                     )
@@ -104,19 +107,20 @@ const MyCard=({ navigation }) =>{
             }}
             >
                 <TextButton 
-                disabled={selectedCard == null}
+                disabled={selectedCard==null}
                 buttonContainerStyle={{
-                    height: 60,
+                    height:60,
                     borderRadius:SIZES.radius,
-                    backgroundColor: selectedCard ==null? COLORS.gray: COLORS.primary
+                    backgroundColor:selectedCard ==null? COLORS.gray: COLORS.primary
                 }}
 
                 label={selectedCard?.key =="NewCard"? "Add" : "Confirm Order"}
+
                 onPress={()=> {
                      if(selectedCard?.key =="NewCard"){
-                         navigation.navigate("AddCard",{selectedCard: selectedCard})
+                         navigation.navigate('AddCard',{selectedCard:selectedCard})
                      } else{
-                         navigation.navigate("Checkout",{selectedCard:selectedCard})
+                         navigation.navigate('Checkout',{selectedCard:selectedCard})
                      }
                 }}
                 />

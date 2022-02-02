@@ -33,8 +33,8 @@ const Success=({ navigation}) =>{
                   }}
                 />
 
-                <Text style={{marginTop: SIZES.padding, ...FONTS.h1}}> Congratulations!</Text>
-                <Text style={{...FONTS.body3, textAlign="center", color:COLORS.darkGray, marginTop:SIZES.base}}>Payment was successfully made</Text>
+                <Text style={{marginTop:SIZES.padding, ...FONTS.h1}}> Congratulations!</Text>
+                <Text style={{...FONTS.body3, textAlign:'center',color:COLORS.darkGray, marginTop:SIZES.base}}>Payment was successfully made</Text>
             </View>
 
             <TextButton

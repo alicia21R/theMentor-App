@@ -10,7 +10,7 @@ import { utils } from "../../utils";
 
 const AddCard =({navigation, route}) =>{
 
-    const[ selectedCard, setSelectedcard]=React.useState(null) 
+    const[selectedCard, setSelectedcard]=React.useState(null) 
     const[cardNumber, setCardNumber] =React.useState("")
     const[cardNumberError, setCardNumberError] =React.useState("")
     const[cardName, setCardName] =React.useState("") 

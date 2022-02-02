@@ -57,44 +57,34 @@ const myCart = [
 
 const myCards = [
     {
-        id: 1,
-        name: "Master Card",
-        icon: require("../assets/icons/mastercard.png"),
-        card_no: "1234"
+        id:1,
+        name:"Master Card",
+        icon:require("../assets/icons/mastercard.png"),
+        card_no:1234
     },
     {
-        id: 2,
-        name: "Google Pay",
-        icon: require("../assets/icons/google.png"),
-        card_no: "1234"
+        id:2,
+        name:"Google Pay",
+        icon:require("../assets/icons/google.png"),
+        card_no:1234
     },
 ]
 
 const allCards = [
     {
         id: 1,
-        name: "Apple Pay",
-        icon: require("../assets/icons/apple.png")
+        name: "MTN",
+        icon: require("../assets/MTN_Group-Logo.wine.png")
     },
     {
         id: 2,
-        name: "Visa",
+        name: "VISA",
         icon: require("../assets/icons/visa.png"),
     },
     {
         id: 3,
-        name: "PayPal",
-        icon: require("../assets/icons/paypal.png"),
-    },
-    {
-        id: 4,
-        name: "Google Pay",
-        icon: require("../assets/icons/google.png"),
-    },
-    {
-        id: 5,
-        name: "Master Card",
-        icon: require("../assets/icons/mastercard.png"),
+        name: "AIRTEL",
+        icon: require("../assets/Airtel_logo_logotype_emblem.png"),
     },
 ]
 

@@ -28,7 +28,7 @@ const KAVUYO = {
 
 
 const Level1 = {
-    id: 100,
+    id: 103,
     name: 'BOOK_PACKAGE_LEVEL3',
     price: 30000,
     image: require('../assets/images/UGX_25000.max-350x225.png'),
@@ -72,17 +72,17 @@ const myCards = [
 
 const allCards = [
     {
-        id: 1,
+        id: 3,
         name: "MTN",
         icon: require("../assets/MTN_Group-Logo.wine.png")
     },
     {
-        id: 2,
+        id: 4,
         name: "VISA",
         icon: require("../assets/icons/visa.png"),
     },
     {
-        id: 3,
+        id: 5,
         name: "AIRTEL",
         icon: require("../assets/Airtel_logo_logotype_emblem.png"),
     },

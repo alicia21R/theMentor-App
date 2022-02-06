@@ -8,7 +8,7 @@ import {FormInput, FormInputCheck, RadioButton, Header,IconButton,TextButton } f
 import { FONTS,COLORS,SIZES,icons,images } from "../../constants";
 import { utils } from "../../utils";
 
-const AddCard =({navigation, route}) =>{
+const AddCard =({navigation,route}) =>{
 
     const[selectedCard, setSelectedcard]=React.useState(null) 
     const[cardNumber, setCardNumber] =React.useState("")

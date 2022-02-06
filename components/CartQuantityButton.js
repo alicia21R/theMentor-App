@@ -8,14 +8,12 @@ const CartQuantityButton=({ containerStyle, iconStyle, quantity, onPress}) =>{
     return(
         <TouchableOpacity
         style={{
-
-            width: 40,
-            height: 40,
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderWidth: 1,
-            borderRadius: SIZES.radius,
-            backgroundColor: COLORS.lightOrange2,
+            width:40,
+            height:40,
+            justifyContent:'center',
+            alignItems:'center',
+            borderRadius:SIZES.radius,
+            backgroundColor:COLORS.white,
             ...containerStyle
         }}
 
@@ -25,9 +23,9 @@ const CartQuantityButton=({ containerStyle, iconStyle, quantity, onPress}) =>{
         <Image
         source={icons.cart}
         style={{
-            width: 20,
-            height: 20,
-            tintColor: COLORS.black,
+            width:30,
+            height:30,
+            tintColor:COLORS.black,
             ...iconStyle
         }}
         
@@ -37,10 +35,11 @@ const CartQuantityButton=({ containerStyle, iconStyle, quantity, onPress}) =>{
         
             style={{
                 position:'absolute',
-                top: 5,
-                right: 5,
-                height: 15,
-                width:15,
+                justifyContent:'center',
+                top:5,
+                right:5,
+                height:20,
+                width:20,
                 alignItems:'center',
                 borderRadius: SIZES.radius,
                 backgroundColor: COLORS.primary
@@ -49,7 +48,7 @@ const CartQuantityButton=({ containerStyle, iconStyle, quantity, onPress}) =>{
         >
             <Text
                 style={{
-                    color: COLORS.black,
+                    color:COLORS.white,
                     ...FONTS.body5,
                     lineHeight:0,
                     fontSize:10

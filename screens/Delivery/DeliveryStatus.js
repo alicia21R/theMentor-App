@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 import { Header, LineDivider,TextButton } from "../../components";
-import { FONTS,COLORS,SIZES,icons,constants} from "../../constants"
-const DeliveryStatus = ({ navigation }) =>{
+import { FONTS,COLORS,SIZES,icons,constants} from "../../constants";
 
+const DeliveryStatus = ({ navigation }) =>{
     const[currentStep, setCurrentStep] = React.useState(0)
     
 
@@ -27,7 +27,7 @@ const DeliveryStatus = ({ navigation }) =>{
                 paddingHorizontal:SIZES.padding
             }}
             >
-                <Text style={{ ...FONTS.body4, textAlign:"center", color:COLORS.gray}}> Estimated Delivery</Text>
+                <Text style={{ ...FONTS.body4, textAlign:"center",color:COLORS.gray}}> Estimated Delivery</Text>
                 <Text style={{ ...FONTS.h2, textAlign:"center"}}> 31 November 2022 / 12:30 am</Text>
 
             </View>
@@ -80,7 +80,7 @@ const DeliveryStatus = ({ navigation }) =>{
                      {constants.track_order_status.map((item,index)=>{
                          return(
                              <View
-                             key={'StatusList-${index}'}
+                             key={`StatusList-${index}`}
                              >
                                  {/* rendering track order icon and text component */}
                                 <View

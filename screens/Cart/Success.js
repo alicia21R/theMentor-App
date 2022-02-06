@@ -42,12 +42,12 @@ const Success=({ navigation}) =>{
             buttonContainerStyle={{
                 height:55,
                 marginBottom:SIZES.padding,
-                borderRadius: SIZES.radius,
+                borderRadius:SIZES.radius,
                 backgroundColor:COLORS.primary
             
             }}
 
-            onPress={() => navigation.naviagte("DeliveryStatus")}
+            onPress={() => navigation.navigate("DeliveryStatus")}
             
             />
 

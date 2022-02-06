@@ -9,9 +9,9 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import {Header, IconButton,FormInput,CardItem,FooterTotal} from "../../components";
 import { FONTS, SIZES, COLORS, icons, dummyData} from "../../constants";
 
-const Checkout = ({ navigation, route }) => {
+const CheckOut = ({ navigation,route }) => {
 
-    const[selectedCard, setSelectedCard] = React.useState(null)
+    const[selectedCard, setSelectedCard] = React.useState({key:""})
     React.useEffect(()=> {
         let{selectedCard} =route.params
         setSelectedCard(selectedCard)
@@ -64,13 +64,12 @@ const Checkout = ({ navigation, route }) => {
 function renderMyCards() {
     return(
         <View>
-            {selectedCard && dummyData.myCards.map((item, index)
-            =>{
+            {selectedCard && dummyData.myCards.map((item, index) =>{
              return(
                  <CardItem 
-                 key={'MyCard-${item.id}'}
+                 key={`MyCard-${item.id}`}
                  item={item}
-                 isSelected={'${selectedCard?.key}-${selectedCard?.id}' == 'MyCard-${item.id}'}
+                 isSelected={`${selectedCard.key}-${selectedCard.id}` == `MyCard-${item.id}`}
                  onPress={() => setSelectedCard({...item, key:"MyCard"})}
                  />
              )   
@@ -116,7 +115,7 @@ function renderDeliveryAddress(){
                     width: "85%",
                     ...FONTS.body3
                 }}
-                > 300 san Fransisco Peru, CA</Text>
+                > plot 53 kanjokya street </Text>
 
             </View>
         </View>
@@ -157,7 +156,7 @@ function renderDeliveryAddress(){
 
             <FooterTotal 
             subTotal={40000}
-            shippingFee={0000}
+            shippingFee={2000}
             total={40000}
             onPress={()=> navigation.replace("Success")}
             />
@@ -165,4 +164,4 @@ function renderDeliveryAddress(){
     )
 }
 
-export default Checkout;
+export default CheckOut;

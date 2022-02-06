@@ -28,7 +28,7 @@ const RadioButton = ({
        onPress={onPress}
        >
            <Image
-           source={isselected ? icons.check_on : icons.check_off}
+           source={isSelected ? icons.check_on : icons.check_off}
            style={{
                marginLeft:5,
                width: 20,

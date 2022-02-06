@@ -7,7 +7,7 @@ import { FONTS, SIZES, COLORS,icons,dummyData } from "../../constants";
 const MyCard=({ navigation }) =>{
 
     // usestates for the selected card
-    const [selectedCard,setSelectedcard]=React.useState(null);
+    const [selectedCard,setSelectedCard]=React.useState({key:""});
 
     function renderHeader() {
         return(
@@ -60,11 +60,11 @@ const MyCard=({ navigation }) =>{
                 {dummyData.myCards.map((item, index) =>{
                     return(
                         <CardItem
-                        key={'MyCard-${item.id}'}
+                        key={`MyCard-${item.id}`}
                         item={item}
-                        isSelected={'${selectedCard.key}-${selectedCard.id}' == 'MyCard-${item.id}'}
+                        isSelected={`${selectedCard.key}-${selectedCard.id}` == `MyCard-${item.id}`}
                         onPress={() => 
-                            setSelectedcard({...item,key:"MyCard"})}
+                            setSelectedCard({...item,key:"MyCard"})}
                         />
                     )
                 })}
@@ -84,11 +84,11 @@ const MyCard=({ navigation }) =>{
                 {dummyData.allCards.map((item, index)=>{
                     return(
                         <CardItem
-                        key={'NewCard-${item.id}'}
+                        key={`NewCard-${item.id}`}
                         item={item}
-                        isSelected={'${selectedCard.key}-${selectedCard.id' == 'NewCard-${item.id}'}
+                        isSelected={`${selectedCard.key}-${selectedCard.id}`==`NewCard-${item.id}`}
                         onPress={()=> 
-                            setSelectedcard({...item, key:"NewCard"})}
+                            setSelectedCard({...item, key:"NewCard"})}
                         
                         />
                     )
@@ -117,6 +117,7 @@ const MyCard=({ navigation }) =>{
                 label={selectedCard?.key =="NewCard"? "Add" : "Confirm Order"}
 
                 onPress={()=> {
+                    
                      if(selectedCard?.key =="NewCard"){
                          navigation.navigate('AddCard',{selectedCard:selectedCard})
                      } else{

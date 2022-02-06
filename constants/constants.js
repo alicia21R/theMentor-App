@@ -26,27 +26,22 @@ const delivery_time = [
 
 const track_order_status = [
     {
-        id: 1,
+        id: 4,
         title: "Order Confirmed",
         sub_title: "Your order has been received"
     },
     {
-        id: 2,
-        title: "Order Prepared",
-        sub_title: "Your order has been prepared"
-    },
-    {
-        id: 3,
+        id: 6,
         title: "Delivery in Progress",
-        sub_title: "Hang on! Your food is on the way"
+        sub_title: "Delivery on the way"
     },
     {
-        id: 4,
+        id: 7,
         title: "Delivered",
-        sub_title: "Enjoy your meal!"
+        sub_title: "Order Delivered!"
     },
     {
-        id: 5,
+        id: 8,
         title: "Rate Us",
         sub_title: "Help us improve our service"
     }

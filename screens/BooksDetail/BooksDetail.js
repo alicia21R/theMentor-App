@@ -55,7 +55,7 @@ const BooksDetail =({ navigation }) =>{
             rightComponent={
                 <CartQuantityButton
                 
-                quantity={3}
+                quantity={Qty}
                 
                 
                 />

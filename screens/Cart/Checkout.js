@@ -12,9 +12,12 @@ import { FONTS, SIZES, COLORS, icons, dummyData} from "../../constants";
 const CheckOut = ({ navigation,route }) => {
 
     const[selectedCard, setSelectedCard] = React.useState({key:""})
+    const [Total,setTotal]= React.useState(0)
+    
     React.useEffect(()=> {
-        let{selectedCard} =route.params
+        let{selectedCard,total} =route.params
         setSelectedCard(selectedCard)
+        setTotal(total)
     }, [])
 
     function renderHeader() {
@@ -155,9 +158,9 @@ function renderDeliveryAddress(){
             </KeyboardAwareScrollView>
 
             <FooterTotal 
-            subTotal={40000}
+            subTotal={Total-2000}
             shippingFee={2000}
-            total={40000}
+            total={Total}
             onPress={()=> navigation.replace("Success")}
             />
         </View>

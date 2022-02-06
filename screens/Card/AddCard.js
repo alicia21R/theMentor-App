@@ -144,7 +144,7 @@ const AddCard =({navigation,route}) =>{
                 value={cardNumber}
                 maxLength={19}
                 onChange={(value) => {
-                    setCardNumber(value.replace(/\s/g).replace(/(\d{4})/g, '$1 ').trim())
+                    setCardNumber(value)
                 utils.validateInput(value,19,setCardNumberError)
                 }}
                 errorMsg={cardNumberError}

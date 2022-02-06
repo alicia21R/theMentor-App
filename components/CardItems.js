@@ -32,11 +32,11 @@ const CardItem = ({ item, isSelected, onPress}) =>{
            }}
            >
                <Image
-               source={item.icons}
+               source={item.icon}
                resizeMode='center'
                style={{
-                   width:35, 
-                   height:35
+                   width:100, 
+                   height:100
                }}
                
                />

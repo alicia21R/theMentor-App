@@ -40,7 +40,7 @@ const FooterTotal =({ subTotal , shippingFee, total, onPress}) =>{
                 }}
                 >
                     <Text style={{ flex:1, ...FONTS.body3}}>SubTotal</Text>
-                    <Text style={{ ...FONTS.h3}}>UGX {subTotal.toFixed(2)}</Text>
+                    <Text style={{ ...FONTS.h3}}>UGX {subTotal}</Text>
 
                 </View>
 
@@ -51,7 +51,7 @@ const FooterTotal =({ subTotal , shippingFee, total, onPress}) =>{
                     marginBottom:SIZES.padding,
                 }}>
                     <Text style={{ flex:1, ...FONTS.body3}}> Shipping Fee</Text>
-                    <Text style={{...FONTS.h3}}>UGX {shippingFee.toFixed(2)}</Text> 
+                    <Text style={{...FONTS.h3}}>UGX {shippingFee}</Text> 
                 </View>
 
                 {/* Line */}
@@ -66,7 +66,7 @@ const FooterTotal =({ subTotal , shippingFee, total, onPress}) =>{
                      
                 }}>
                     <Text style={{ flex:1, ...FONTS.h2 }}> Total</Text>
-                    <Text style={{ ...FONTS.h2}}>UGX {total.toFixed(2)}</Text> 
+                    <Text style={{ ...FONTS.h2}}>UGX {total}</Text> 
 
                 </View>
 

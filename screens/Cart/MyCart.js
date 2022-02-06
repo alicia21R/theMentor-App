@@ -18,32 +18,30 @@ const MyCart = ({  navigation }) =>{
     //states for holding the quantity in the cart
     const [myCartList, setMycartList] = React.useState(dummyData.myCart)
     const [sum,setSum] = React.useState(autoSum(myCartList))
-
-    // useEffect(() => { 
-    //        document.title = `You clicked ${count} times`;  
-    //     });
-
+    
+    //for when the array for the card changes,
+    // recompute the sum
+    useEffect(() => {    
+        setSum(autoSum(myCartList))
+    });
 
     // autosummation function
     function autoSum(list){
       let  sum=0;
         for (let i = 0; i < list.length; i++) {
             // myCartList[i];          
-            sum+=myCartList[i].qty*myCartList[i].price
+            sum+=myCartList[i].qty*myCartList[i].price  
         }
         return sum;
     }
     
-
     //Quatntity Handler
     function updateQuantityHandler(newQty,id) {
         
         const newMyCartList = myCartList.map(cl => (
             cl.id === id? {...cl, qty: newQty} :cl
         ))
-
         setMycartList(newMyCartList)
-        setSum(newMyCartList)
     }
 
     function removeMyCarthandler(id) {
@@ -216,7 +214,7 @@ const MyCart = ({  navigation }) =>{
             subTotal={sum}
             shippingFee={2000}
             total={sum+2000}
-            onPress={() => navigation.navigate("MyCard")}
+            onPress={() => navigation.navigate("MyCard",{total:sum+2000})}
             
             />
 

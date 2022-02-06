@@ -4,10 +4,16 @@ import {Header, IconButton, TextButton, CardItem} from "../../components";
 import { FONTS, SIZES, COLORS,icons,dummyData } from "../../constants";
 
 
-const MyCard=({ navigation }) =>{
+const MyCard=({ navigation,route }) =>{
+    
 
     // usestates for the selected card
     const [selectedCard,setSelectedCard]=React.useState({key:""});
+    const [Total,setTotal]= React.useState(0)
+    React.useEffect(()=> {
+        let{total} =route.params
+        setTotal(total)
+    }, [])
 
     function renderHeader() {
         return(
@@ -119,9 +125,9 @@ const MyCard=({ navigation }) =>{
                 onPress={()=> {
                     
                      if(selectedCard?.key =="NewCard"){
-                         navigation.navigate('AddCard',{selectedCard:selectedCard})
+                         navigation.navigate('AddCard',{selectedCard:selectedCard,total:Total})
                      } else{
-                         navigation.navigate('Checkout',{selectedCard:selectedCard})
+                         navigation.navigate('Checkout',{selectedCard:selectedCard,total:Total})
                      }
                 }}
                 />

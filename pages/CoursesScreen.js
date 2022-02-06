@@ -39,7 +39,7 @@ const CoursesScreen = ({ navigation }) => {
               onPress = {()=> navigation.navigate('Resources')}
               >
                 <Text
-                  style={{ textAlign: "center", color: "#fff", fontSize: 18 }}
+                  style={{ textAlign:'center', color: "#fff", fontSize: 18 }}
                 >
                   Resources
                 </Text>
@@ -55,7 +55,7 @@ const CoursesScreen = ({ navigation }) => {
                 onPress = {()=> navigation.navigate('Opportunities')}
               >
                 <Text
-                  style={{ textAlign: "center", color: "#fff", fontSize: 18 }}
+                  style={{ textAlign:'center', color:"#fff", fontSize: 18 }}
                 >
                   Opportunities
                 </Text>

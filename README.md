@@ -1,3 +1,4 @@
+
 <h1 align="center">📚 The Xoma App 📚</h1>
 <p align="center">This is a mobile version of the Mentor for Boundless Minds. Built with React Native, Tailwind CSS.
 </p>
@@ -22,6 +23,26 @@
 </p>
 <a href = "https://github.com/Your_GitHub_Username/Your_Repository_Name/graphs/contributors">
 <img src = "https://contrib.rocks/image?repo = GitHub_username/repository_name"/>
-</a>
 
-Made with [contributors-img](https://contrib.rocks).
+
+</a>Made with [contributors-img](https://contrib.rocks).
+License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
+Acknowledgments
+
+    Hat tip to anyone whose code was used
+    Inspiration
+    etc
+
+Read More
+
+Visit our website for more information: https://www.thementoronline.org
+
+
+Download
+
+The app is available for download on the Google Play Store: 
+
+<script src="https://gist.github.com/lsvra/05d37d7f527ab5cd1e081559254a08d3.js"></script>
+
